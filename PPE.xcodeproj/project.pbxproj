@@ -36,6 +36,7 @@
 				App/PPEApp.swift,
 				Assets.xcassets,
 				ContentView.swift,
+				Models/best.mlpackage,
 				"Preview Content/Preview Assets.xcassets",
 			);
 			target = 710EB0542EC6F52100962BD5 /* PPE */;
@@ -49,6 +50,13 @@
 				"Preview Content/Preview Assets.xcassets",
 			);
 			target = 710EB0642EC6F52300962BD5 /* PPETests */;
+		};
+		710EB0CE2EC7040900962BD5 /* Exceptions for "PPE" folder in "PPEUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/best.mlpackage,
+			);
+			target = 710EB06E2EC6F52300962BD5 /* PPEUITests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -68,6 +76,7 @@
 			exceptions = (
 				710EB0C72EC702F100962BD5 /* Exceptions for "PPE" folder in "PPE" target */,
 				710EB0C82EC702F100962BD5 /* Exceptions for "PPE" folder in "PPETests" target */,
+				710EB0CE2EC7040900962BD5 /* Exceptions for "PPE" folder in "PPEUITests" target */,
 			);
 			path = PPE;
 			sourceTree = "<group>";

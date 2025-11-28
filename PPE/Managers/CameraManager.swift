@@ -29,7 +29,7 @@ class CameraManager: NSObject {
 
         guard let device = AVCaptureDevice.default(.builtInWideAngleCamera,
                                                    for: .video,
-                                                   position: .front),
+                                                   position: .back),
               let input = try? AVCaptureDeviceInput(device: device)
         else { return }
 

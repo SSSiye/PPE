@@ -4,6 +4,9 @@ struct CameraView: View {
 
     var body: some View {
         PixelBufferView(pixelBuffer: cameraVM.currentBuffer)
+            .frame(width: UIScreen.main.bounds.width,
+                   height: UIScreen.main.bounds.height)
+
             .onAppear {
                 cameraVM.startCamera()
             }

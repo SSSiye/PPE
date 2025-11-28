@@ -35,9 +35,13 @@
 			membershipExceptions = (
 				App/PPEApp.swift,
 				Assets.xcassets,
-				ContentView.swift,
+				Managers/CameraManager.swift,
 				Models/best.mlpackage,
 				"Preview Content/Preview Assets.xcassets",
+				ViewModels/CameraViewModel.swift,
+				Views/Camera/CameraView.swift,
+				Views/Camera/PixelBufferView.swift,
+				Views/ContentView.swift,
 			);
 			target = 710EB0542EC6F52100962BD5 /* PPE */;
 		};
@@ -46,8 +50,13 @@
 			membershipExceptions = (
 				App/PPEApp.swift,
 				Assets.xcassets,
-				ContentView.swift,
+				Info.plist,
+				Managers/CameraManager.swift,
 				"Preview Content/Preview Assets.xcassets",
+				ViewModels/CameraViewModel.swift,
+				Views/Camera/CameraView.swift,
+				Views/Camera/PixelBufferView.swift,
+				Views/ContentView.swift,
 			);
 			target = 710EB0642EC6F52300962BD5 /* PPETests */;
 		};
@@ -430,8 +439,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PPE/Preview Content\"";
+				DEVELOPMENT_TEAM = R83JF9K5WA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PPE/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "안전장비 착용여부 확인을 위해 카메라 권한을 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,8 +470,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PPE/Preview Content\"";
+				DEVELOPMENT_TEAM = R83JF9K5WA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PPE/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "안전장비 착용여부 확인을 위해 카메라 권한을 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

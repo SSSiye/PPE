@@ -36,7 +36,9 @@
 				App/PPEApp.swift,
 				Assets.xcassets,
 				Managers/CameraManager.swift,
+				Managers/YOLOModelManager.swift,
 				Models/best.mlpackage,
+				Models/Detection.swift,
 				"Preview Content/Preview Assets.xcassets",
 				ViewModels/CameraViewModel.swift,
 				Views/Camera/CameraView.swift,
@@ -52,6 +54,7 @@
 				Assets.xcassets,
 				Info.plist,
 				Managers/CameraManager.swift,
+				Managers/YOLOModelManager.swift,
 				"Preview Content/Preview Assets.xcassets",
 				ViewModels/CameraViewModel.swift,
 				Views/Camera/CameraView.swift,
@@ -64,6 +67,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Models/best.mlpackage,
+				Models/Detection.swift,
 			);
 			target = 710EB06E2EC6F52300962BD5 /* PPEUITests */;
 		};

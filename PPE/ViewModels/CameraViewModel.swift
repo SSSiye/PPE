@@ -1,5 +1,4 @@
 import SwiftUI
-import AVFoundation
 class CameraViewModel: ObservableObject {
     @Published var currentBuffer: CVPixelBuffer?
     private let cameraManager = CameraManager()

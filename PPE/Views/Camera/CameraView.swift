@@ -3,15 +3,21 @@ struct CameraView: View {
     @StateObject private var cameraVM = CameraViewModel()
 
     var body: some View {
-        PixelBufferView(pixelBuffer: cameraVM.currentBuffer)
-            .frame(width: UIScreen.main.bounds.width,
-                   height: UIScreen.main.bounds.height)
+        GeometryReader { geo in
+            ZStack {
+                PixelBufferView(pixelBuffer: cameraVM.currentBuffer)
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .onAppear {
+                        cameraVM.startCamera()
+                    }
+                    .onDisappear {
+                        cameraVM.stopCamera()
+                    }
 
-            .onAppear {
-                cameraVM.startCamera()
+                DetectionOverlay(detections: cameraVM.detections, size: geo.size)
+                    .allowsHitTesting(false)
             }
-            .onDisappear {
-                cameraVM.stopCamera()
-            }
+        }
+        .ignoresSafeArea()
     }
 }

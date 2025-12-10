@@ -42,6 +42,7 @@
 				"Preview Content/Preview Assets.xcassets",
 				ViewModels/CameraViewModel.swift,
 				Views/Camera/CameraView.swift,
+				Views/Camera/DetectionOverlay.swift,
 				Views/Camera/PixelBufferView.swift,
 				Views/ContentView.swift,
 			);
@@ -58,6 +59,7 @@
 				"Preview Content/Preview Assets.xcassets",
 				ViewModels/CameraViewModel.swift,
 				Views/Camera/CameraView.swift,
+				Views/Camera/DetectionOverlay.swift,
 				Views/Camera/PixelBufferView.swift,
 				Views/ContentView.swift,
 			);

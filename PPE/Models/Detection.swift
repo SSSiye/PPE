@@ -12,4 +12,13 @@ public struct Detection: Identifiable {
         self.confidence = confidence
         self.boundingBox = boundingBox
     }
+
+    // 화면 좌표로 변환하는 메서드 추가
+    public func screenRect(for size: CGSize) -> CGRect {
+        let width = boundingBox.width * size.width
+        let height = boundingBox.height * size.height
+        let x = boundingBox.minX * size.width
+        let y = (1 - boundingBox.maxY) * size.height
+        return CGRect(x: x, y: y, width: width, height: height)
+    }
 }

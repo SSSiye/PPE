@@ -94,15 +94,22 @@ final class YOLOModelManager {
     }
 
     func predict(pixelBuffer: CVPixelBuffer, completion: @escaping ([Detection]) -> Void) {
+        print("📌 predict() 호출됨")
         guard let vnModel = vnModel else {
+            print("❌ vnModel is nil — 모델이 로드되지 않음")
             DispatchQueue.main.async { completion([]) }
             return
         }
+        print("✅ vnModel 정상 로드됨")
 
         let request = VNCoreMLRequest(model: vnModel) { [weak self] request, _ in
             var detections: [Detection] = []
             let results = request.results ?? []
-
+            print("📌 Vision raw results count:", results.count)
+            for (i, r) in results.enumerated() {
+                print("🔍 result[\(i)] 타입:", type(of: r))
+            }
+            
             for res in results {
                 if let obj = res as? VNRecognizedObjectObservation {
                     let rawBox = obj.boundingBox
@@ -126,6 +133,10 @@ final class YOLOModelManager {
                         }
                     }
                 }
+            }
+            print("📦 최종 detections 개수:", detections.count)
+            for det in detections {
+                print("➡️ DETECTION:", det.className, det.confidence, det.boundingBox)
             }
 
             DispatchQueue.main.async {

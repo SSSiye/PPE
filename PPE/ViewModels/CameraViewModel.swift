@@ -40,10 +40,10 @@ class CameraViewModel: ObservableObject {
                         print("Detected:", det.className, det.confidence, det.boundingBox)
                     }
                 }
-                self?.detections = [
-                                Detection(className: "Helmet", confidence: 0.9, boundingBox: CGRect(x: 0.2, y: 0.3, width: 0.2, height: 0.2)),
-                                Detection(className: "Gloves", confidence: 0.85, boundingBox: CGRect(x: 0.5, y: 0.4, width: 0.2, height: 0.2))
-                            ]
+//                self?.detections = [
+//                                Detection(className: "Helmet", confidence: 0.9, boundingBox: CGRect(x: 0.2, y: 0.3, width: 0.2, height: 0.2)),
+//                                Detection(className: "Gloves", confidence: 0.85, boundingBox: CGRect(x: 0.5, y: 0.4, width: 0.2, height: 0.2))
+//                            ]
                 self?.isProcessing = false
             }
         }

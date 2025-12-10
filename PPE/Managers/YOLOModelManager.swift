@@ -144,7 +144,7 @@ final class YOLOModelManager {
             }
         }
 
-        request.imageCropAndScaleOption = .scaleFill
+        request.imageCropAndScaleOption = .scaleFit
         let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .up)
 
         DispatchQueue.global(qos: .userInitiated).async {

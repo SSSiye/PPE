@@ -1,6 +1,4 @@
 import SwiftUI
-import AVFoundation
-
 struct PixelBufferView: UIViewRepresentable {
     var pixelBuffer: CVPixelBuffer?
 

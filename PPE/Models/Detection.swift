@@ -18,7 +18,7 @@ public struct Detection: Identifiable {
         let width = boundingBox.width * size.width
         let height = boundingBox.height * size.height
         let x = boundingBox.minX * size.width
-        let y = (1 - boundingBox.maxY) * size.height
+        let y = boundingBox.minY * size.height
         return CGRect(x: x, y: y, width: width, height: height)
     }
 }

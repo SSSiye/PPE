@@ -3,13 +3,14 @@ import SwiftUI
 struct DetectionOverlay: View {
     let detections: [Detection]
     let size: CGSize
-
     var body: some View {
         ZStack {
             ForEach(detections) { det in
                 let rect = det.screenRect(for: size)
+                let boxColor = color(for: det.className)
+
                 Rectangle()
-                    .stroke(Color.red, lineWidth: 3)
+                    .stroke(boxColor, lineWidth: 3)
                     .frame(width: rect.width, height: rect.height)
                     .position(x: rect.midX, y: rect.midY)
 
@@ -22,4 +23,16 @@ struct DetectionOverlay: View {
             }
         }
     }
+    private func color(for className: String) -> Color {
+           switch className {
+           case "no-hardhat":
+               return .red
+           case "hardhat":
+               return .green
+           case "no-gloves":
+               return .orange
+           default:
+               return .yellow
+           }
+       }
 }

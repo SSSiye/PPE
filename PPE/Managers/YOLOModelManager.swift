@@ -115,9 +115,9 @@ final class YOLOModelManager {
                     let rawBox = obj.boundingBox
                     let box = CGRect(
                         x: rawBox.origin.x,
-                        y: 1 - rawBox.origin.y - rawBox.size.height,
-                        width: rawBox.size.width,
-                        height: rawBox.size.height
+                        y: 1 - rawBox.origin.y - rawBox.height,
+                        width: rawBox.width,
+                        height: rawBox.height
                     )
 
                     if let top = obj.labels.first {
@@ -145,7 +145,8 @@ final class YOLOModelManager {
         }
 
         request.imageCropAndScaleOption = .scaleFit
-        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .up)
+        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .leftMirrored) //front카메라일때 leftMirrored
+       // let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .right) //back카메라일때 right
 
         DispatchQueue.global(qos: .userInitiated).async {
             do { try handler.perform([request]) }

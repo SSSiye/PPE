@@ -6,6 +6,7 @@ struct CameraView: View {
         GeometryReader { geo in
             ZStack {
                 PixelBufferView(pixelBuffer: cameraVM.currentBuffer)
+                    .scaleEffect(x: -1)
                     .frame(width: geo.size.width, height: geo.size.height)
                     .onAppear {
                         cameraVM.startCamera()

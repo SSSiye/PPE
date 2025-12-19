@@ -1,10 +1,3 @@
-//
-//  PPEUITestsLaunchTests.swift
-//  PPEUITests
-//
-//  Created by siye on 11/14/25.
-//
-
 import XCTest
 
 final class PPEUITestsLaunchTests: XCTestCase {
